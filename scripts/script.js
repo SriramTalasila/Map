@@ -12,11 +12,9 @@ window.onclick = function (event) {
     }
 }
 //Display error message if map not loaded
-function loadmap() {
-    $('#message').html('loading map.....');
-    setTimeout(function () {
-        $('#message').html('Failed to load map check your connection');
-    }, 6000)
+function googleError() {
+    alert("Failed to load map Check your connection");
+    console.log("Error in loading google map"); 
 }
 
 //To open the sidebar
@@ -29,7 +27,7 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
-loadmap();
+
 var stringStartsWith = function (string, startsWith) {
     string = string || "";
     if (startsWith.length > string.length)
