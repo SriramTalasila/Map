@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Best Places</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://images.vexels.com/media/users/3/137476/isolated/preview/d89adf16dc6fce8b9abe54aec3af2546-four-peak-mountain-icon-by-vexels.png"
+    />
+    <link rel="stylesheet" href="css/w3css.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/knockout-3.1.0.js"></script>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+        <button class="w3-right w3-button w3-large" onclick="w3_close()"> &times;</button>
+        <br>
+        <h3>Locations</h3>
+        <div style="padding: 5%;">
+
+            <label for="input">Search:</label>
+            <input class='w3-input w3-border' id="input" data-bind="value: title, valueUpdate: 'afterkeydown'" />
+            <div data-bind="foreach:markedlocations">
+                <a class="w3-bar-item" data-bind="text : $data.mark.title,click: $root.clickfunction"></a>
+                <br/>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+    <div id="head">
+        <button class="w3-button w3-large " onclick="w3_open()">&#9776;</button>
+        <h1 class="">Best Places</h1>
+    </div>
+    <div id="map"></div>
+    <div id="message"></div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="mhead">Modal Header</h2>
+            </div>
+            <div id="images" class="modal-body">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+<script src="scripts/script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2FfgR46moDIrHTw89sJGtu__mxcCRchU&libraries=geometry&callback=initMap"
+    async defer></script>
+
+</html>
