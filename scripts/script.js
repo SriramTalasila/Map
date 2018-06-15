@@ -14,7 +14,8 @@ window.onclick = function (event) {
 //Display error message if map not loaded
 function googleError() {
     alert("Failed to load map Check your connection");
-    console.log("Error in loading google map"); 
+    console.log("Error in loading google map");
+    $("#message").html('Failed to load map Check your connection'); 
 }
 
 //To open the sidebar
