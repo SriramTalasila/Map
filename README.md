@@ -13,6 +13,9 @@
 
    The maps used in this application are refered from [Google maps documentation](https://developers.google.com/maps/documentation/javascript/tutorial)
 
+### W3 css
+   Styles and classes used in this webpage are reffered  from [W3.css](https://www.w3schools.com/w3css/)
+
 ### Flickr api
    Flickr is images and video sharing platform where we can share your images with public.Flickr api helps to get images based on location
 
